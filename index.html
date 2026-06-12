@@ -826,7 +826,7 @@ map.fitBounds(countyLayer.getBounds().pad(.04));
 </script>
 <!-- Petition button + embedded signature form -->
 <style>
-#signbtn{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:1000;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:none;background:#1a3a6b;color:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.25);max-width:90vw}
+#signbtn{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:1000;padding:16px 34px;font-size:19px;font-weight:700;cursor:pointer;border:none;background:#1a3a6b;color:#fff;border-radius:12px;box-shadow:0 3px 18px rgba(0,0,0,.35);max-width:92vw}
 #signbtn:hover{background:#24508f}
 #signoverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000}
 #signmodal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,94vw);height:min(85vh,900px);background:#fff;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.35);overflow:hidden}
@@ -843,9 +843,11 @@ map.fitBounds(countyLayer.getBounds().pad(.04));
 <script>
 (function(){
 var o=document.getElementById('signoverlay'),f=document.getElementById('signframe');
-document.getElementById('signbtn').onclick=function(){if(!f.src)f.src=f.getAttribute('data-src');o.style.display='block';};
+var open=function(){if(!f.src)f.src=f.getAttribute('data-src');o.style.display='block';};
+document.getElementById('signbtn').onclick=open;
 document.getElementById('signclose').onclick=function(){o.style.display='none';};
 o.addEventListener('click',function(e){if(e.target===o)o.style.display='none';});
+setTimeout(open,1500); // auto-show petition shortly after the map loads
 })();
 </script>
 </body></html>
