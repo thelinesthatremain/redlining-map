@@ -823,4 +823,12 @@ const all=document.createElement('button');all.textContent='↖ All Alabama';all
 document.getElementById('aboutbtn').onclick=()=>{document.getElementById('about').style.display='block';document.getElementById('aboutbtn').style.display='none';};
 drawLegend();
 map.fitBounds(countyLayer.getBounds().pad(.04));
-</script></body></html>
+</script>
+<!-- Petition button + embedded Tally form popup -->
+<style>
+#signbtn{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:1000;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;border:none;background:#1a3a6b;color:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.25);max-width:90vw}
+#signbtn:hover{background:#24508f}
+</style>
+<button id="signbtn" data-tally-open="QKE0X7" data-tally-layout="modal" data-tally-width="700" data-tally-auto-close="2000">✍ Sign the petition for housing equality</button>
+<script async src="https://tally.so/widgets/embed.js"></script>
+</body></html>
