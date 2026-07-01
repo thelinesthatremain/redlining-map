@@ -826,14 +826,20 @@ map.fitBounds(countyLayer.getBounds().pad(.04));
 </script>
 <!-- Petition button + embedded signature form -->
 <style>
-#signbtn{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:1000;padding:16px 34px;font-size:19px;font-weight:700;cursor:pointer;border:none;background:#1a3a6b;color:#fff;border-radius:12px;box-shadow:0 3px 18px rgba(0,0,0,.35);max-width:92vw}
+#ctastack{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:1000;display:flex;flex-direction:column;align-items:center;gap:10px;max-width:92vw}
+#substackbtn{display:inline-block;text-decoration:none;text-align:center;padding:12px 26px;font-size:15px;font-weight:700;cursor:pointer;border:none;background:#ff6719;color:#fff;border-radius:12px;box-shadow:0 3px 18px rgba(0,0,0,.35);max-width:100%}
+#substackbtn:hover{background:#e85c14}
+#signbtn{padding:16px 34px;font-size:19px;font-weight:700;cursor:pointer;border:none;background:#1a3a6b;color:#fff;border-radius:12px;box-shadow:0 3px 18px rgba(0,0,0,.35)}
 #signbtn:hover{background:#24508f}
 #signoverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000}
 #signmodal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,94vw);height:min(85vh,900px);background:#fff;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.35);overflow:hidden}
 #signclose{position:absolute;top:8px;right:12px;z-index:2;border:none;background:#eee;border-radius:50%;width:30px;height:30px;font-size:16px;cursor:pointer;line-height:1}
 #signmodal iframe{width:100%;height:100%;border:0}
 </style>
-<button id="signbtn">✍ Sign the petition for housing equality</button>
+<div id="ctastack">
+ <a id="substackbtn" href="https://substack.com/@thelinesthatremain" target="_blank" rel="noopener">📖 Read on Substack — The Lines That Remain</a>
+ <button id="signbtn">✍ Sign the petition for housing equality</button>
+</div>
 <div id="signoverlay">
  <div id="signmodal">
   <button id="signclose" aria-label="Close">×</button>
