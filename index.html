@@ -850,10 +850,10 @@ map.fitBounds(countyLayer.getBounds().pad(.04));
 (function(){
 var o=document.getElementById('signoverlay'),f=document.getElementById('signframe');
 var open=function(){if(!f.src)f.src=f.getAttribute('data-src');o.style.display='block';};
-document.getElementById('signbtn').onclick=open;
+document.getElementById('signbtn').onclick=function(){window.open('https://c.org/vpsgfyxwcm','_blank','noopener');};
 document.getElementById('signclose').onclick=function(){o.style.display='none';};
 o.addEventListener('click',function(e){if(e.target===o)o.style.display='none';});
-setTimeout(open,1500); // auto-show petition shortly after the map loads
+ // auto-show petition shortly after the map loads
 })();
 </script>
 </body></html>
